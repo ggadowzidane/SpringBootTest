@@ -20,6 +20,31 @@ repositories {
 dependencies {
 	//io.spring.dependency-management를 사용했기에 버전 명시를 안해도 됨. spring boot 2.7.18이 관리하는 버전을 자동으로 사용함.
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    
+    
+    // Spring Security - 인증(Authentication)과 권한(Authorization)을 처리하기위한
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    
+    // JWT
+    implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+    
+    // MyBatis
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.2'
+	
+	// MariaDB JDBC Driver
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+    
+
+	// Lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 

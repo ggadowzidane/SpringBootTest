@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="exam.web.emp.mapper.EmpMapper">
+    <select id="selectEmpByLoginId"
+            resultType="exam.web.emp.dto.Emp">
+        SELECT
+            emp_id,
+            emp_nm,
+            login_id,
+            login_pwd
+        FROM EMP
+        WHERE login_id = #{loginId}
+    </select>
+
+</mapper>
